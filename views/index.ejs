@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    <%= title %>
+  </title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1 class="text-center my-5">
+    <%= title %>
+  </h1>
+  <div class="container-sm">
+    <ul class="list-group">
+      <% msgs.forEach(msg=> { %>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <strong>
+              <%= msg.user %>
+            </strong>
+            <%= msg.added %>
+          </div>
+          <p>
+            <%= msg.text %>
+          </p>
+
+        </li>
+        <% }) %>
+    </ul>
+  </div>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
